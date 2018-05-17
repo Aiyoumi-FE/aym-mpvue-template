@@ -1,4 +1,4 @@
-# mpvue-quickstart
+# aym-mpvue-template
 
 > fork 自 [mpvue-quickstart](https://github.com/mpvue/mpvue-quickstart)修改而来。
 
