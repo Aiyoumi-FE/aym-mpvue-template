@@ -40,18 +40,15 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      {{#if_eq build "standalone"}}
-      // 'vue$': 'vue/dist/vue.esm.js',
-      {{/if_eq}}
       'vue': 'mpvue',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'flyio': 'flyio/dist/npm/wx',
+      'wx': resolve('src/utils/wx')
     },
-    symlinks: false,
-    mainFields: ['browser', 'module', 'main']
+    symlinks: false
   },
   module: {
     rules: [
-      {{#lint}}
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -61,7 +58,6 @@ module.exports = {
           formatter: require('eslint-friendly-formatter')
         }
       },
-      {{/lint}}
       {
         test: /\.vue$/,
         loader: 'mpvue-loader',
