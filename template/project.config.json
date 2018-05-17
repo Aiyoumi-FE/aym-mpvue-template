@@ -1,5 +1,5 @@
 {
-	"description": "海量儿童故事,一起来八爪鱼听听吧",
+	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
@@ -9,8 +9,8 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "wx4a3afa727dd1afe5",
-	"projectname": "mp-audio",
+	"appid": "{{ appid }}",
+	"projectname": "{{ name }}",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,14 +1,17 @@
 {
-  "name": "mp-audio",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "基于 mpvue 实现Audio微信小程序",
-  "author": "dotview <dotview@163.com>",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "npm run dev",
-    "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "start": "node build/dev-server.js",
+    "build": "rimraf dist && node build/build.js"{{#unit}},
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"{{/unit}}{{#e2e}},
+    "e2e": "node test/e2e/runner.js"{{/e2e}}{{#if_or unit e2e}},
+    "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}"{{/if_or}}{{#lint}},
+    "lint": "eslint --ext .js,.vue src{{#unit}} test/unit/specs{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}"{{/lint}}
   },
   "dependencies": {
     "flyio": "^0.4.5",

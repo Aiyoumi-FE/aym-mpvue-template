@@ -46,7 +46,7 @@ module.exports = {
         }
       ]
     },
-    "vuex": {
+    /*"vuex": {
       "type": "confirm",
       "message": "Use Vuex?"
     },
@@ -79,20 +79,20 @@ module.exports = {
     "test": {
       "value": false,
       "message": "小程序测试，敬请关注最新微信开发者工具的“测试报告”功能"
-    }
+    }*/
   },
   "filters": {
-    ".eslintrc.js": "lint",
-    ".eslintignore": "lint",
+    // ".eslintrc.js": "lint",
+    // ".eslintignore": "lint",
     // "config/test.env.js": "unit || e2e",
     // "test/unit/**/*": "unit",
     // "build/webpack.test.conf.js": "unit",
     // "test/e2e/**/*": "e2e"
-    "config/test.env.js": "test",
-    "test/unit/**/*": "test",
-    "build/webpack.test.conf.js": "test",
-    "test/e2e/**/*": "test",
-    "src/pages/counter/*": "vuex",
+    // "config/test.env.js": "test",
+    // "test/unit/**/*": "test",
+    // "build/webpack.test.conf.js": "test",
+    // "test/e2e/**/*": "test",
+    // "src/pages/counter/*": "vuex",
   },
   // "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at http://mpvue.com"
